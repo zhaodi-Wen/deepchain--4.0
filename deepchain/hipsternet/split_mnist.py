@@ -8,8 +8,6 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"]="2"
 mnist = input_data.read_data_sets("MNIST_Data/",one_hot=True)
 #train_x,train_y,test_x,test_y = mnist.train.images,mnist.train.labels,mnist.test.images,mnist.test.labels
 def get_sample(X,y,size,shuffle=True):
-    if shuffle:
-        X,y = skshuffle(X,y)
     return X[:size],y[:size]
 
 class Split_data(object):
